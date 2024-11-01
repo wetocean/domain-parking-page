@@ -1,0 +1,58 @@
+:root {
+    --animation-duration: 0.6s;
+}
+
+body {
+    background-color: var(--bs-dark);
+    color: var(--bs-light);
+}
+
+.fade-in {
+    animation: fadeIn var(--animation-duration) ease-in;
+}
+
+.fade-in-delay {
+    animation: fadeIn var(--animation-duration) ease-in;
+    animation-delay: 0.2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.fade-in-delay-2 {
+    animation: fadeIn var(--animation-duration) ease-in;
+    animation-delay: 0.4s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.domain-icon {
+    transition: transform 0.3s ease;
+}
+
+.domain-icon:hover {
+    transform: scale(1.1);
+}
+
+.form-control {
+    background-color: var(--bs-dark);
+    border-color: var(--bs-secondary);
+    color: var(--bs-light);
+}
+
+.form-control:focus {
+    background-color: var(--bs-dark);
+    border-color: var(--bs-primary);
+    color: var(--bs-light);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
